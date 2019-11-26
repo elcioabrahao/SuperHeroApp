@@ -33,6 +33,7 @@ class MainAdapter: ListAdapter<Hero, RecyclerView.ViewHolder>(HeroDiffCallback()
         fun bind(item: Hero) {
             binding.apply {
                 superhero = item
+                
                 executePendingBindings()
             }
         }

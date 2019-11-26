@@ -67,6 +67,8 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit2"
     implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit2"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3loginterceptor"
+    implementation "com.github.bumptech.glide:glide:$glideversion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideversion"
     testImplementation "junit:junit:$rootProject.junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxtestextjunit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.androidxexpresso"
