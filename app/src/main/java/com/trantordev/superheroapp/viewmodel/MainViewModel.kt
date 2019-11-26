@@ -12,7 +12,8 @@ class MainViewModel internal constructor(
 ): ViewModel() {
 
     var mainListener: MainListener? = null
-    var resource: String = "2006.json"
+    var year: Int = 2006
+    var resource: String = "$year.json"
 
 
     val heroes = liveData(Dispatchers.IO) {
