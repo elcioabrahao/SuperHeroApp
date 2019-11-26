@@ -43,6 +43,7 @@ buildscript {
         okhttp3loginterceptor = '4.2.1'
         kotlincoroutines = '1.3.2'
         retrofitcoroutines = '1.1.0'
+        glideversion = '4.9.0'
 
     }
     repositories {
