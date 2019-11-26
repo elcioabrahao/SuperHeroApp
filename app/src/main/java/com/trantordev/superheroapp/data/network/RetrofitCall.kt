@@ -7,7 +7,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitCall {
 
-    private var BASE_URL: String = "https://bitbucket.org/dttden/mobile-coding-challenge/raw/259972edefb1eed313b3a8f1a0cc1d822aa5914f/"
+    private var BASE_URL: String
+            = "https://bitbucket.org/dttden/mobile-coding-challenge/raw/259972edefb1eed313b3a8f1a0cc1d822aa5914f/"
     private var retrofit: Retrofit? = null
 
     fun getCall(): Retrofit {
@@ -18,8 +19,7 @@ class RetrofitCall {
             interceptor.level = HttpLoggingInterceptor.Level.BODY
             val client = Builder().addInterceptor(interceptor).build()
 
-
-            retrofit = retrofit2.Retrofit.Builder()
+            retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)

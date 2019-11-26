@@ -28,7 +28,7 @@ class MainAdapter(): ListAdapter<Hero, RecyclerView.ViewHolder>(HeroDiffCallback
     ) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.setClickListener {
-                // On click não implementado propositalmente
+                // do nothing
             }
         }
 

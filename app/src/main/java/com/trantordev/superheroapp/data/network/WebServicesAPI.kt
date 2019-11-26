@@ -5,8 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Url
 
 interface WebServicesAPI {
-
     @GET
     suspend fun getHeroes(@Url url:String):SuperHeroDataResponse
-
 }
