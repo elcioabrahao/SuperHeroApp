@@ -20,17 +20,16 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="@{Integer.toString(viewmodel.year)}"
             android:textColor="#000"
             android:textSize="40dp"/>
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:id="@+id/swipe_container"
+            android:id="@+id/swipeContainer"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintTop_toBottomOf="@+id/textViewYear"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:onRefreshListener="@{() -> viewmodel.loadNext()}">
+            app:onRefreshListener="@{() -> viewmodel.refreshList()}">
 
 
         <androidx.recyclerview.widget.RecyclerView
