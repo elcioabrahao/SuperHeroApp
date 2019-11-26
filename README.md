@@ -1,9 +1,14 @@
 # Super Hero App
-##Description
+
+
+## Description
+
 This app is test app for Westpoint UK, author: Elcio Abrahão, Nov/2019
-##Features
+
+## Features
 The features described below apper on the order of the source folders of the repository.
-####Architecture
+
+#### Architecture
 - Kotlin: less code, well organized, no bolierplate, current Android standard language.
 - Android Jetpack (Databinding, ViewModel, LiveData): ultimate Google recomendation, native libs, less code do more.
 - MVVM: simple to organize code, could use MVI or MVP as it is a small app.
@@ -11,24 +16,31 @@ The features described below apper on the order of the source folders of the rep
 - Kotlin coroutines: make assynk calls native for Kotlin, easy integrated with retrofit2, very fast and small footprint.
 - Dependecy Injection: simple solution, no need to use big libs as Dagguer2 or Koin.
 - ViewModel: keep data on screen turn, avoid memory leaks.
-####Network
+
+#### Network
 - Retrofit2: realy an standard for REST calls, avoid a lot of boilerplate, small implementation when using Kotlin coroutines, nice Logs.
-####Data
+
+#### Data
 - Repostiroty pattern: keep code as uncle boob clean code standars, easy to test, allow use Room to cache network data if needed (not implemented on the example).
-####UI
+
+#### UI
 - Simple activity with fragment, data binding with the XML layouts.
 - Androidx libs: new standard for views.
 - Adapter claas link ViewHolder thru databinding, less boilerplate, clean code on the fragment, easy to maintenance.
-####ViewModel
+
+#### ViewModel
 - Very simple code, no need of AndroidRx or RXJava, using LiveData instead.
 - Elegant solution to sort data and select only the first 3 super heros with only one line of code:
-            val list: List<Hero> = retrivedHeroes.heroes.sortedWith(compareBy({it.score})).sortedByDescending { it.score }.dropLast(1)
-####Tests
+``` 
+val list: List<Hero> = retrivedHeroes.heroes.sortedWith(compareBy({it.score})).sortedByDescending { it.score }.dropLast(1)
+```
+#### Tests
 - UnitTest: not implemented.
 - Integration Test: Expresso: simple wake up the main activity, swipe 6 times, check if the list changes.
 - Custom Matcher for swipe refreshing.
 - Custom Matcher for time delay.
-####Screenshots
+
+#### Screenshots
 ![](https://elcioabrahao.github.io/super1.jpg)
 > 2006 ranking
 
