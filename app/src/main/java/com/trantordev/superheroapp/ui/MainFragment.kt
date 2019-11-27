@@ -34,7 +34,7 @@ class MainFragment : Fragment(), MainListener {
         binding.heroList.adapter = adapter
         binding.viewmodel = viewModel
         viewModel.mainListener = this
-        viewModel.year = ano;
+        //viewModel.year = ano;
         subscribeUi()
         setHasOptionsMenu(true)
         return binding.root

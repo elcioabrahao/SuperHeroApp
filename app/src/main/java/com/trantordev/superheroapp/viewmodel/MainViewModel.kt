@@ -17,8 +17,7 @@ class MainViewModel internal constructor(
     var year: Int? = null
 
     fun loadNext(): LiveData<SuperHeroDataResponse>{
-        year = year!! + 3
-        if(year!!>2018) year = 2006
+        if(year == null) year = 2006
         return liveData(Dispatchers.IO) {
             val retrivedHeroes = mainRepository.getHeroes("$year.json")
             val list: List<Hero> = retrivedHeroes.heroes.sortedWith(compareBy({it.score}))
@@ -29,6 +28,8 @@ class MainViewModel internal constructor(
     }
 
     fun refreshList(){
+        year = year!! + 3
+        if(year!!>2018) year = 2006
         mainListener!!.onRefresh()
     }
 
